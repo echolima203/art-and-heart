@@ -1,0 +1,14 @@
+{
+  "name": "Art & Heart · Béziers",
+  "short_name": "Art & Heart",
+  "description": "A renovated 14th-century apartment in the historic heart of Béziers, South of France.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfaf3",
+  "theme_color": "#574272",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# guide.html uses a noindex meta tag, so it is left crawlable
+# (Google must fetch it to honour noindex) but kept out of the index.
+
+Sitemap: https://www.artandheartbeziers.com/sitemap.xml
