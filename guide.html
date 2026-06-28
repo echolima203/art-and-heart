@@ -193,7 +193,7 @@
     <a href="#beaches">Beaches &amp; Day Trips</a>
     <a href="#wine">Wine Tours</a>
     <a href="#bike">Bike the Canal du Midi</a>
-    <a href="#quiz">Béziers Quiz</a>
+    <a href="#" onclick="openQuiz();return false;">Béziers Quiz</a>
     <a href="#contact">Contact &amp; Longer Stays</a>
   </nav>
 </div>
@@ -411,7 +411,7 @@
       <h3><span class="ico">📍</span> The address</h3>
       <p style="font-size:.92rem">29 Rue du 4 Septembre, 34500 Béziers — right next to the Mairie (Town Hall) and the Police station, in the pedestrian historic centre.</p>
       <div class="btnrow">
-        <a class="btn sea" href="https://maps.google.com/?q=29+Rue+du+4+Septembre+34500+Béziers" target="_blank">🗺️ Open in Google Maps</a>
+        <a class="btn sea" href="https://maps.google.com/?q=31+Rue+du+4+Septembre+34500+Béziers" target="_blank">🗺️ Open in Google Maps</a>
       </div>
     </div>
 
@@ -453,9 +453,14 @@
       <div class="dist">~3 km from the apartment</div>
     </div>
     <div class="rec">
-      <h4>Les Halles — covered market <span class="tag">Local life</span></h4>
-      <p>The 1891 cast-iron market hall, fully restored in 2024. Open Tuesday–Sunday (closed Mondays). Come for fresh produce, oysters, cheese and a glass of local wine at the bar.</p>
+      <h4>Les Halles — covered market <span class="tag">★ Best market in France</span></h4>
+      <p>The 1891 cast-iron market hall, beautifully restored and reopened in late 2024 — and voted <b>France's Most Beautiful Market 2025</b>! Open Tuesday–Sunday (closed Mondays) for fresh produce, oysters, cheese and a glass of local wine at the bar.</p>
       <div class="dist">~5 min walk</div>
+    </div>
+    <div class="rec" style="background:linear-gradient(135deg,var(--lavender-dk),var(--plum));color:#fff;border-color:transparent;text-align:center">
+      <h4 style="color:#fff;justify-content:center">🧠 How well do you know Béziers?</h4>
+      <p style="color:#efe6f5;margin-top:4px">A quick quiz on the city — past &amp; present.</p>
+      <button class="btn" style="margin-top:10px" onclick="openQuiz()">Play the quiz →</button>
     </div>
     <div class="rec">
       <h4>Cours / pedestrian old town <span class="tag">Stroll &amp; shop</span></h4>
@@ -572,16 +577,6 @@
   </div>
 </section>
 
-<section id="quiz" class="wide">
-  <div class="wrap">
-    <div class="eyebrow">Just for Fun</div>
-    <h2>How Well Do You Know Béziers?</h2>
-    <p class="lead">A quick quiz on the city's past and present — tap an answer to see if you're right. No prizes, just bragging rights at dinner!</p>
-    <div id="quizbox"></div>
-    <div id="quizscore" class="note" style="display:none"></div>
-  </div>
-</section>
-
 <footer id="contact">
   <h3>Need anything during your stay?</h3>
   <p>Your host <b>Bouchra</b> (Come &amp; Rest Conciergerie) and both owners are happy to help.<br>For a quick answer, message us in the booking platform chat. For a call, reach Bouchra directly.</p>
@@ -592,6 +587,17 @@
 
 <div class="modal" id="roomModal" onclick="if(event.target===this)closeRoom()">
   <div class="sheet" id="roomSheet" role="dialog" aria-modal="true"></div>
+</div>
+
+<div class="modal" id="quizModal" onclick="if(event.target===this)closeQuiz()">
+  <div class="sheet" id="quizSheet" role="dialog" aria-modal="true">
+    <button class="x" onclick="closeQuiz()" aria-label="Close">×</button>
+    <div class="rn">Just for fun</div>
+    <h3>How Well Do You Know Béziers?</h3>
+    <p style="font-size:.9rem;color:var(--muted);margin:4px 0 8px">Tap an answer to see if you're right — past &amp; present.</p>
+    <div id="quizbox"></div>
+    <div id="quizscore" class="note" style="display:none"></div>
+  </div>
 </div>
 
 <script>
@@ -630,12 +636,15 @@
 <script>
   var QUIZ=[
     {q:"Béziers is one of the oldest cities in France — older than Paris.",o:["True","False"],a:0,e:"True! A Greek settlement stood here around 575 BC, making Béziers one of France's oldest cities — older than Paris and even Marseille."},
-    {q:"Who was born in Béziers and designed the Canal du Midi?",o:["Pierre-Paul Riquet","Gustave Eiffel","Napoleon Bonaparte"],a:0,e:"Pierre-Paul Riquet (born 1609) — a salt-tax collector who, at 58, began building the 240 km Canal du Midi linking the Mediterranean to the Atlantic."},
-    {q:"French Resistance hero Jean Moulin was born in Béziers.",o:["True","False"],a:0,e:"True — Jean Moulin (1899–1943), who unified the French Resistance, was born here. The local Fine Arts Museum holds his art collection."},
-    {q:"Since when has the Canal du Midi been a UNESCO World Heritage Site?",o:["The 1990s (1996)","The 1970s","The 2010s"],a:0,e:"Since 1996. The canal runs 240 km from the Mediterranean to Toulouse."},
-    {q:"What is the famous lock 'staircase' just outside Béziers called?",o:["The 9 Locks of Fonseranes","The Béziers Steps","The Riquet Falls"],a:0,e:"The Neuf Écluses de Fonseranes — a chain of locks that lifts boats 21.5 m. One of the most-visited sights in the region."},
-    {q:"Roughly how many people live in Béziers today?",o:["About 80,000","About 30,000","About 250,000"],a:0,e:"Around 80,000 — a lively mid-sized city that proudly keeps its Occitan character."},
-    {q:"Every August Béziers hosts a festival drawing about a million visitors. What is it?",o:["The Feria de Béziers","Oktoberfest","The Cannes Festival"],a:0,e:"The Feria de Béziers — five days of street parties, music, flamenco and bullfighting traditions each August."}
+    {q:"Who was born in Béziers and designed the Canal du Midi?",o:["Gustave Eiffel","Pierre-Paul Riquet","Vauban"],a:1,e:"Pierre-Paul Riquet (born 1609) — at 58 he began the 240 km Canal du Midi linking the Mediterranean to the Atlantic."},
+    {q:"In 2025, Les Halles de Béziers won a national title. Which one?",o:["Best Cheese in France","Largest Market in Europe","France's Most Beautiful Market"],a:2,e:"France's Most Beautiful Market! Les Halles won 'Le Plus Beau Marché de France 2025' (TF1), after a €20 M restoration reopened it in late 2024."},
+    {q:"French Resistance hero Jean Moulin was born in Béziers.",o:["False","True"],a:1,e:"True — Jean Moulin (1899–1943), who unified the French Resistance, was born here. The local Fine Arts Museum holds his art collection."},
+    {q:"On which days is the antiques & 'brocante' market held on the Allées Paul Riquet?",o:["Mondays only","Tuesdays & Saturdays","Sundays only"],a:1,e:"Tuesdays & Saturdays — plus a lovely flower market every Friday on the same leafy avenue."},
+    {q:"Béziers' Italian-style Théâtre Municipal (built 1844) today is…",o:["Closed and derelict","Restored and still hosting a full season of shows","Converted into a cinema"],a:1,e:"Restored and very much alive — it's the only Italian-style 'bonbonnière' theatre in France to keep its original look, with shows Oct–May and backstage tours by appointment."},
+    {q:"Local Languedoc reds (Syrah, Grenache, Mourvèdre) are typically known for notes of…",o:["Tropical mango & banana","Red fruit, spice & garrigue herbs","Smoky peat"],a:1,e:"Red fruit, warm spice and 'garrigue' (wild Mediterranean herbs) — the signature of Saint-Chinian, Faugères and Languedoc reds."},
+    {q:"Since when has the Canal du Midi been a UNESCO World Heritage Site?",o:["The 1970s","Since 1996","The 2010s"],a:1,e:"Since 1996. The canal runs 240 km from the Mediterranean to Toulouse."},
+    {q:"Roughly how many people live in Béziers today?",o:["About 250,000","About 30,000","About 80,000"],a:2,e:"Around 80,000 — a lively city that proudly keeps its Occitan character."},
+    {q:"Every August Béziers hosts a festival drawing about a million visitors. What is it?",o:["Oktoberfest","The Cannes Festival","The Feria de Béziers"],a:2,e:"The Feria de Béziers — five days of music, flamenco and street parties each August."}
   ];
   (function(){
     var box=document.getElementById('quizbox'); if(!box) return;
@@ -664,6 +673,9 @@
       box.appendChild(card);
     });
   })();
+  function openQuiz(){document.getElementById('quizModal').classList.add('open');document.body.style.overflow='hidden';}
+  function closeQuiz(){document.getElementById('quizModal').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeQuiz();});
 </script>
 
 </body>
