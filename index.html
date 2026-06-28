@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art &amp; Heart · Apartment in Béziers, South of France</title>
+<meta name="description" content="Art & Heart — a beautifully renovated 14th-century apartment in the historic heart of Béziers, South of France. Sleeps up to 7. Book on Booking.com or Airbnb.">
+<meta property="og:title" content="Art & Heart · Béziers, South of France">
+<meta property="og:description" content="Historic elegance meets modern comfort — renovated 2025, steps from the cathedral, 14 km from the beach. Rated 9/10.">
+<meta property="og:image" content="images/beziers.jpg">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --lavender:#8b7cb0;--lavender-dk:#675591;--plum:#574272;--olive:#869a5b;
+    --terra:#c97a48;--ochre:#d79a4f;--wine:#8e3a52;--sea:#4a89a8;
+    --sand:#ece0c9;--sand-lt:#f7efe0;--lav-tint:#f3eef7;--cream:#fdfaf3;
+    --ink:#4b4136;--muted:#8b7d6c;--line:#e8ddc8;--shadow:0 10px 34px rgba(87,66,114,.12);
+    --booking:#003b95;--airbnb:#ff385c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:66px}
+  body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:62px}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:600;line-height:1.2;color:var(--plum)}
+  a{color:var(--wine);text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(253,250,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .topbar .row{display:flex;align-items:center;gap:10px;max-width:1080px;margin:0 auto;padding:10px 18px}
+  .brand{font-family:Georgia,serif;font-weight:700;color:var(--plum);font-size:1.05rem;letter-spacing:.5px}
+  .brand small{display:block;font-family:'Segoe UI',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--terra)}
+  .topbar .book-mini{margin-left:auto;display:flex;gap:7px}
+  .menu-btn{background:none;border:1px solid var(--line);border-radius:8px;padding:7px 11px;color:var(--plum);font-size:.85rem;cursor:pointer}
+  nav.drawer{display:none;border-top:1px solid var(--line);background:var(--cream)}
+  nav.drawer.open{display:block}
+  nav.drawer a{display:block;padding:11px 18px;border-bottom:1px solid var(--line);color:var(--ink);font-size:.95rem}
+
+  .hero{position:relative;color:#fff;text-align:center;padding:80px 18px 86px;
+    background:linear-gradient(rgba(72,52,104,.58),rgba(142,58,82,.5)),url('images/beziers.jpg') center 40%/cover;}
+  .hero .sprig{margin:0 auto 6px;display:block;opacity:.9}
+  .hero .crest{font-size:.68rem;letter-spacing:4px;text-transform:uppercase;color:#f3d9c4}
+  .hero h1{color:#fff;font-size:2.3rem;margin:10px 0 8px;text-shadow:0 2px 18px rgba(40,25,55,.45)}
+  .hero .sub{font-size:1.02rem;opacity:.96;max-width:560px;margin:0 auto;text-shadow:0 1px 10px rgba(40,25,55,.5)}
+  .hero .badges{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+  .badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);border-radius:30px;padding:7px 14px;font-size:.8rem;backdrop-filter:blur(3px)}
+  .badge b{color:#fff}
+  .hero .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+
+  .bookbtn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:30px;font-size:.96rem;font-weight:700;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .bookbtn.booking{background:var(--booking)}
+  .bookbtn.airbnb{background:var(--airbnb)}
+  .bookbtn.small{padding:8px 13px;font-size:.8rem;border-radius:22px;box-shadow:none}
+
+  section{padding:40px 0}
+  section.alt{background:var(--lav-tint)}
+  section.sand{background:var(--sand-lt)}
+  .eyebrow{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:6px}
+  h2{font-size:1.55rem;margin-bottom:4px}
+  .lead{color:var(--muted);margin-bottom:22px;max-width:760px}
+
+  .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-50px;position:relative;z-index:5}
+  .hl{background:#fff;border-radius:14px;padding:15px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line);border-top:3px solid var(--lavender)}
+  .hl .n{font-family:Georgia,serif;font-size:1.5rem;color:var(--plum)}
+  .hl .t{font-size:.76rem;color:var(--muted);margin-top:2px}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+  .pillbox{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+  .pill{background:var(--sand-lt);border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:.82rem;color:var(--ink)}
+  .note{background:#fbf3e8;border-left:3px solid var(--ochre);border-radius:0 8px 8px 0;padding:11px 13px;font-size:.9rem;color:#7a5f3c;margin-top:10px}
+
+  .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .room{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s,box-shadow .15s;border-top:3px solid var(--ochre)}
+  .room:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(87,66,114,.18)}
+  .room .rn{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .room .rt{font-family:Georgia,serif;color:var(--plum);font-size:1rem;margin:4px 0}
+  .room .rd{font-size:.82rem;color:var(--muted)}
+  .room .more{font-size:.72rem;color:var(--wine);font-weight:700;margin-top:9px}
+
+  .modal{position:fixed;inset:0;background:rgba(57,42,80,.55);backdrop-filter:blur(3px);z-index:100;display:none;padding:18px;overflow-y:auto}
+  .modal.open{display:flex;align-items:flex-start;justify-content:center}
+  .sheet{background:#fff;max-width:560px;width:100%;border-radius:18px;padding:22px;margin:auto;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.3);animation:pop .2s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .sheet .x{position:absolute;top:12px;right:14px;width:34px;height:34px;border:none;border-radius:50%;background:var(--lav-tint);color:var(--plum);font-size:1.2rem;cursor:pointer}
+  .sheet .rn{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .sheet h3{font-size:1.5rem;margin:3px 0 2px}
+  .sheet .beds{color:var(--wine);font-weight:600;font-size:.95rem;margin-bottom:10px}
+  .sheet p{font-size:.95rem;color:var(--ink)}
+  .sheet .mphotos{display:grid;gap:10px;margin-top:14px}
+  .sheet .mphotos img{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .tile{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--sand);box-shadow:var(--shadow)}
+  .tile .label{position:absolute;inset:0;display:flex;align-items:flex-end;padding:10px;color:#fff;font-size:.82rem;font-weight:600;background:linear-gradient(transparent 45%,rgba(57,42,80,.6));z-index:1}
+  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+
+  .rec{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin-bottom:11px;box-shadow:var(--shadow)}
+  .rec h4{font-family:Georgia,serif;color:var(--plum);font-size:1.02rem;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .rec .tag{font-size:.64rem;letter-spacing:1px;text-transform:uppercase;background:var(--lav-tint);color:var(--lavender-dk);padding:2px 8px;border-radius:12px;font-weight:700}
+  .rec p{font-size:.9rem;color:var(--muted);margin-top:4px}
+  .rec .dist{font-size:.8rem;color:var(--olive);font-weight:700;margin-top:5px}
+
+  .banner{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:6px 0 20px;position:relative}
+  .banner img{width:100%;height:230px;object-fit:cover}
+  .banner .cap{position:absolute;left:0;bottom:0;right:0;padding:14px;color:#fff;font-family:Georgia,serif;background:linear-gradient(transparent,rgba(57,42,80,.78));font-size:1.05rem}
+  .feature{border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin:18px auto;position:relative;max-width:330px}
+  .feature img{width:100%;height:auto}
+  .feature .cap{position:absolute;left:0;bottom:0;right:0;padding:10px 12px;color:#fff;font-family:Georgia,serif;background:linear-gradient(transparent,rgba(57,42,80,.78));font-size:.9rem}
+
+  /* Book section */
+  .booksec{background:linear-gradient(135deg,var(--plum),var(--lavender-dk));color:#fff;text-align:center}
+  .booksec h2{color:#fff}
+  .booksec .eyebrow{color:#f3d9c4}
+  .booksec p{opacity:.94;max-width:620px;margin:0 auto 8px}
+  .booksec .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .booksec .seasons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .seasons .s{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:12px 16px;font-size:.88rem;min-width:200px}
+  .seasons .s b{display:block;font-family:Georgia,serif;font-size:1.05rem;margin-bottom:2px}
+
+  footer{position:relative;color:#fbeede;text-align:center;padding:40px 18px 44px;
+    background:linear-gradient(rgba(57,42,80,.82),rgba(57,42,80,.82)),url('images/cathedral-sunset.jpg') center/cover}
+  footer h3{color:#fff;font-size:1.3rem}
+  footer p{font-size:.9rem;opacity:.92;margin-top:6px}
+  footer small{display:block;margin-top:20px;opacity:.7;font-size:.75rem}
+
+  /* Sticky book bar */
+  .bookbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+    display:flex;gap:8px;padding:9px 14px;box-shadow:0 -6px 20px rgba(87,66,114,.12)}
+  .bookbar a{flex:1;justify-content:center;text-align:center}
+
+  @media(min-width:640px){.hero h1{font-size:2.95rem}.gal{grid-template-columns:1fr 1fr 1fr}}
+  @media(min-width:860px){
+    .wide .wrap{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;align-items:start}
+    .wide .wrap > .eyebrow,.wide .wrap > h2,.wide .wrap > .lead,.wide .wrap > .note,.wide .wrap > .banner{grid-column:1/-1}
+    .wide .rec{margin-bottom:14px;break-inside:avoid}
+    .bookbar{display:none}
+    body{padding-bottom:0}
+  }
+  @media(max-width:430px){.highlights{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="row">
+    <div class="brand">Art &amp; Heart<small>South of France · Béziers</small></div>
+    <div class="book-mini">
+      <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+      <a class="bookbtn airbnb small" href="#book">Book</a>
+    </div>
+  </div>
+  <nav class="drawer" id="nav" onclick="this.classList.remove('open')">
+    <a href="#apartment">The Apartment</a>
+    <a href="#discover">Discover Béziers</a>
+    <a href="#eat">Where to Eat</a>
+    <a href="#beaches">Beaches &amp; Day Trips</a>
+    <a href="#book">Book Your Stay</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <svg class="sprig" width="26" height="40" viewBox="0 0 26 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M13 40 V14" stroke="#e9d6b8" stroke-width="2" fill="none"/>
+    <g fill="#d9b9e0"><ellipse cx="13" cy="9" rx="3" ry="5"/><ellipse cx="8" cy="15" rx="2.4" ry="4" transform="rotate(-25 8 15)"/><ellipse cx="18" cy="15" rx="2.4" ry="4" transform="rotate(25 18 15)"/><ellipse cx="9" cy="22" rx="2.2" ry="3.6" transform="rotate(-25 9 22)"/><ellipse cx="17" cy="22" rx="2.2" ry="3.6" transform="rotate(25 17 22)"/></g>
+  </svg>
+  <div class="crest">✦ Hôtel de Guibal · A 14th-Century Gem ✦</div>
+  <h1>Art &amp; Heart<br>in the South of France</h1>
+  <p class="sub">A beautifully renovated apartment in the historic heart of Béziers — between vineyards, Mediterranean beaches and golden stone. Sleeps up to 7.</p>
+  <div class="badges">
+    <div class="badge">★ <b>9/10</b> on Booking.com</div>
+    <div class="badge">📍 <b>9.8</b> for location</div>
+    <div class="badge">💑 <b>9.8</b> for couples</div>
+    <div class="badge">🛠️ Renovated <b>2025</b></div>
+  </div>
+  <div class="cta">
+    <a class="bookbtn booking" href="https://www.booking.com/Share-qY6ne3M" target="_blank" rel="noopener">Book on Booking.com</a>
+    <a class="bookbtn airbnb" href="https://www.airbnb.ie/rooms/1350493377156698276?guests=1&adults=1&s=67&unique_share_id=6ead7522-ef67-4ef0-a4c6-81dc18992e04" target="_blank" rel="noopener">Book on Airbnb</a>
+  </div>
+</header>
+
+<section id="highlights-sec">
+  <div class="wrap">
+    <div class="highlights">
+      <div class="hl"><div class="n">2</div><div class="t">Bedrooms</div></div>
+      <div class="hl"><div class="n">4–7</div><div class="t">Guests</div></div>
+      <div class="hl"><div class="n">1st</div><div class="t">Floor · 1 staircase</div></div>
+      <div class="hl"><div class="n">4 min</div><div class="t">To the cathedral</div></div>
+      <div class="hl"><div class="n">14 km</div><div class="t">To the beach</div></div>
+      <div class="hl"><div class="n">2025</div><div class="t">Renovated</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="apartment">
+  <div class="wrap">
+    <div class="eyebrow">The Home</div>
+    <h2>Historic Elegance, Modern Comfort</h2>
+    <p class="lead">Set inside the prestigious Hôtel de Guibal — the former Town Hall — this spacious, light-filled apartment has parquet floors, a private inner courtyard and tasteful "Art &amp; Heart" details throughout. Two bedrooms plus a sofa bed make it ideal for families and groups of friends.</p>
+
+    <div class="rooms">
+      <div class="room" role="button" tabindex="0" onclick="openRoom('bed1')" onkeypress="if(event.key==='Enter')openRoom('bed1')"><div class="rn">Bedroom 1</div><div class="rt">1 double bed</div><div class="rd">Tropical mural · marble fireplace</div><div class="more">View details →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('bed2')" onkeypress="if(event.key==='Enter')openRoom('bed2')"><div class="rn">Bedroom 2</div><div class="rt">Sofa-bed + single above</div><div class="rd">Converts to a double · cot available</div><div class="more">View details →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('living')" onkeypress="if(event.key==='Enter')openRoom('living')"><div class="rn">Living room</div><div class="rt">1 sofa bed</div><div class="rd">Sleeps 2 more</div><div class="more">View details →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('kitchen')" onkeypress="if(event.key==='Enter')openRoom('kitchen')"><div class="rn">Kitchen</div><div class="rt">Fully equipped</div><div class="rd">Oven · induction hob · Nespresso</div><div class="more">View details →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('bathroom')" onkeypress="if(event.key==='Enter')openRoom('bathroom')"><div class="rn">Bathroom</div><div class="rt">Walk-in shower</div><div class="rd">Washer · hairdryer · towels</div><div class="more">View details →</div></div>
+    </div>
+
+    <div class="feature">
+      <img src="images/living-room.jpg" alt="Art & Heart interior detail">
+      <div class="cap">Little touches of "Art &amp; Heart" throughout the home</div>
+    </div>
+
+    <h3 style="font-size:1.1rem;margin:18px 0 8px;color:var(--plum)">Photo tour</h3>
+    <div class="gal">
+      <div class="tile"><span class="label">Living &amp; dining room</span><img src="images/living-wide.jpg" alt="Living and dining room" loading="lazy"></div>
+      <div class="tile"><span class="label">Lounge &amp; sofa</span><img src="images/salon.jpg" alt="Lounge" loading="lazy"></div>
+      <div class="tile"><span class="label">Relax corner</span><img src="images/living-cosy.jpg" alt="Sofa corner" loading="lazy"></div>
+      <div class="tile"><span class="label">Bedroom 1</span><img src="images/bedroom1.jpg" alt="Bedroom 1" loading="lazy"></div>
+      <div class="tile"><span class="label">Bedroom details</span><img src="images/bedroom1-detail.jpg" alt="Bedroom details" loading="lazy"></div>
+      <div class="tile"><span class="label">Second bedroom</span><img src="images/bedroom2.jpg" alt="Second bedroom" loading="lazy"></div>
+      <div class="tile"><span class="label">Work desk</span><img src="images/workspace.jpg" alt="Workspace" loading="lazy"></div>
+      <div class="tile"><span class="label">Private courtyard</span><img src="images/courtyard.jpg" alt="Courtyard" loading="lazy"></div>
+      <div class="tile"><span class="label">Historic stairway</span><img src="images/courtyard2.jpg" alt="Courtyard stairway" loading="lazy"></div>
+    </div>
+
+    <h3 style="font-size:1.1rem;margin:22px 0 4px;color:var(--plum)">What's included</h3>
+    <div class="pillbox">
+      <span class="pill">Fast WiFi + Ethernet</span><span class="pill">Smart TV &amp; streaming</span><span class="pill">Full kitchen</span>
+      <span class="pill">Nespresso machine</span><span class="pill">Washing machine</span><span class="pill">Dedicated workspace</span>
+      <span class="pill">Dining table for 6</span><span class="pill">100% cotton linen &amp; towels</span><span class="pill">Heating</span>
+      <span class="pill">2 fans</span><span class="pill">High chair &amp; cot</span><span class="pill">Hairdryer &amp; iron</span>
+      <span class="pill">Wine glasses</span><span class="pill">Private courtyard</span>
+    </div>
+  </div>
+</section>
+
+<section id="discover" class="sand wide">
+  <div class="wrap">
+    <div class="eyebrow">Explore</div>
+    <h2>Discover Béziers</h2>
+    <div class="banner">
+      <img src="images/cathedral-sunset.jpg" alt="Saint-Nazaire Cathedral at sunset" loading="lazy">
+      <div class="cap">Saint-Nazaire Cathedral — a 4-minute walk away</div>
+    </div>
+    <p class="lead">One of France's oldest cities — wine culture, stunning architecture and the UNESCO-listed Canal du Midi. Mediterranean beaches, vineyards and rich gastronomy, without the crowds.</p>
+
+    <div class="rec"><h4>Saint-Nazaire Cathedral <span class="tag">4 min walk</span></h4><p>The hilltop landmark with sweeping views over the Orb valley — free entry and a climbable tower.</p></div>
+    <div class="rec"><h4>The 9 Locks of Fonseranes <span class="tag">Canal du Midi</span></h4><p>A spectacular "water staircase" on the UNESCO canal — one of the region's most-visited sights.</p><div class="dist">~3 km away</div></div>
+    <div class="rec"><h4>Les Halles — covered market <span class="tag">Local life</span></h4><p>The restored 1891 cast-iron market hall — fresh produce, oysters and a glass of local wine.</p><div class="dist">~5 min walk</div></div>
+    <div class="rec"><h4>Pont Vieux &amp; the riverside <span class="tag">Photo spot</span></h4><p>The 12th-century "Old Bridge" frames the postcard view of the cathedral above the town.</p></div>
+    <div class="note">🎉 <b>Feria de Béziers</b> — every August the city hosts its famous five-day festival: street parties, flamenco and music, drawing over a million visitors.</div>
+  </div>
+</section>
+
+<section id="eat" class="wide">
+  <div class="wrap">
+    <div class="eyebrow">Taste the South</div>
+    <h2>Eat, Drink &amp; Local Wine</h2>
+    <div class="banner">
+      <img src="images/cours-guibal.jpg" alt="Café terrace in the old town" loading="lazy">
+      <div class="cap">Café terraces tucked into the old town's courtyards</div>
+    </div>
+    <p class="lead">The squares of the old town are full of terraces, all an easy walk from the door.</p>
+    <div class="rec"><h4>L'Orangerie <span class="tag">Brasserie</span></h4><p>Cosy brasserie with a lovely terrace — regional dishes and Southern French wines.</p></div>
+    <div class="rec"><h4>Le Petit Montmartre <span class="tag">French</span></h4><p>On pretty Place de la Madeleine — tradition meets creativity.</p></div>
+    <div class="rec"><h4>L'Octopus <span class="tag">★ Michelin</span></h4><p>For a special evening — Béziers' Michelin-starred address. Reserve ahead.</p></div>
+    <div class="rec"><h4>Around Les Halles <span class="tag">Casual</span></h4><p>Tapas, oysters and local wine by the glass around the market hall and squares.</p></div>
+    <div class="note">🍷 You're in the heart of <b>Languedoc wine country</b> — Saint-Chinian, Faugères and Picpoul de Pinet are all on the doorstep.</div>
+  </div>
+</section>
+
+<section id="beaches" class="alt wide">
+  <div class="wrap">
+    <div class="eyebrow">Sea, Sun &amp; Excursions</div>
+    <h2>Beaches &amp; Day Trips</h2>
+    <div class="banner">
+      <img src="images/beach.jpg" alt="Valras-Plage beach with palm trees" loading="lazy">
+      <div class="cap">Valras-Plage — 4 km of golden Mediterranean sand</div>
+    </div>
+    <div class="rec"><h4>Valras-Plage <span class="tag">Beach</span></h4><p>4 km of fine sandy beach with a lively seafront — ideal for families.</p><div class="dist">~14 km · 20 min</div></div>
+    <div class="rec"><h4>Sète <span class="tag">Day trip</span></h4><p>The "Venice of Languedoc" — canals, fishing port and superb seafood.</p><div class="dist">~45 min</div></div>
+    <div class="rec"><h4>Pézenas <span class="tag">Day trip</span></h4><p>One of Occitanie's prettiest towns, surrounded by vineyards.</p><div class="dist">~25 min</div></div>
+    <div class="rec"><h4>Carcassonne <span class="tag">UNESCO</span></h4><p>The legendary medieval walled fortress — easy direct train.</p><div class="dist">~45 min</div></div>
+    <div class="rec"><h4>Narbonne <span class="tag">Day trip</span></h4><p>Roman heritage, a grand cathedral and a wonderful covered market.</p><div class="dist">~30 min</div></div>
+    <div class="rec"><h4>Saint-Guilhem-le-Désert <span class="tag">Village</span></h4><p>One of France's most beautiful villages, in the Gorges de l'Hérault.</p><div class="dist">~1 hr</div></div>
+  </div>
+</section>
+
+<section id="book" class="booksec">
+  <div class="wrap">
+    <div class="eyebrow">Reserve Your Dates</div>
+    <h2>Book Your Stay</h2>
+    <p>Historic charm, modern comfort and the Mediterranean on your doorstep. Check availability and book securely on your preferred platform.</p>
+    <div class="cta">
+      <a class="bookbtn booking" href="https://www.booking.com/Share-qY6ne3M" target="_blank" rel="noopener">Book on Booking.com</a>
+      <a class="bookbtn airbnb" href="https://www.airbnb.ie/rooms/1350493377156698276?guests=1&adults=1&s=67&unique_share_id=6ead7522-ef67-4ef0-a4c6-81dc18992e04" target="_blank" rel="noopener">Book on Airbnb</a>
+    </div>
+    <div class="seasons">
+      <div class="s"><b>April – October</b>Short stays · perfect for sun, sea &amp; the Feria</div>
+      <div class="s"><b>November – March</b>Available by the month — a cosy winter escape</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>Art &amp; Heart · Béziers</h3>
+  <p>29 Rue du 4 Septembre, 34500 Béziers — South of France<br>Historic centre · beside the Town Hall · 14 km from the beach</p>
+  <small>Rated 9/10 on Booking.com · Renovated 2025 · We can't wait to welcome you to the South of France ✦</small>
+</footer>
+
+<div class="bookbar">
+  <a class="bookbtn booking small" href="https://www.booking.com/Share-qY6ne3M" target="_blank" rel="noopener">Booking.com</a>
+  <a class="bookbtn airbnb small" href="https://www.airbnb.ie/rooms/1350493377156698276?guests=1&adults=1&s=67&unique_share_id=6ead7522-ef67-4ef0-a4c6-81dc18992e04" target="_blank" rel="noopener">Airbnb</a>
+</div>
+
+<div class="modal" id="roomModal" onclick="if(event.target===this)closeRoom()">
+  <div class="sheet" id="roomSheet" role="dialog" aria-modal="true"></div>
+</div>
+
+<script>
+  var ROOMS={
+    bed1:{label:"Bedroom 1",beds:"1 double bed",desc:"The romantic main bedroom and the standout room of the apartment — a striking tropical mural, a marble fireplace, mirrored bedside tables and soft lighting. Crisp 100% cotton linen.",imgs:["images/bedroom1.jpg","images/living-room.jpg","images/bedroom1-detail.jpg"]},
+    bed2:{label:"Bedroom 2",beds:"Sofa-bed (converts to a double) + single bed above · cot available",desc:"A bright, versatile family room. The lower sofa converts into a double bed, with a single above — ideal for children or friends. Baby cot available on request.",imgs:["images/bedroom2.jpg"]},
+    living:{label:"Living room",beds:"1 sofa bed (sleeps 2 more)",desc:"Open-plan living and dining with parquet floors and an archway to the kitchen. A large corner sofa converts into a sofa bed, with a marble dining table for six and a smart TV.",imgs:["images/living-wide.jpg","images/salon.jpg","images/living-cosy.jpg"]},
+    kitchen:{label:"Kitchen",beds:"Fully equipped — oven, induction hob, microwave & Nespresso",desc:"A bright, fully equipped kitchen with soft grey cabinets, gold pendant lights and a marble breakfast bar. Oven, induction hob, microwave, fridge & freezer, kettle, toaster and Nespresso, plus crockery, cutlery, pots, pans and wine glasses — everything you need to cook and dine in.",imgs:["images/kitchen.jpg"]},
+    bathroom:{label:"Bathroom",beds:"Walk-in shower · washing machine · hairdryer",desc:"A pretty bathroom with cheerful floral wallpaper, a large walk-in glass shower, a modern vanity and a heated towel rail. Washing machine, hairdryer and fresh towels provided.",imgs:["images/bathroom.jpg","images/bathroom2.jpg"]}
+  };
+  function openRoom(k){var r=ROOMS[k];if(!r)return;var i=r.imgs.map(function(s){return '<img src="'+s+'" alt="'+r.label+'" loading="lazy" onerror="this.style.display=\'none\'">';}).join('');document.getElementById('roomSheet').innerHTML='<button class="x" onclick="closeRoom()" aria-label="Close">×</button><div class="rn">'+r.label+'</div><h3>'+r.label+'</h3><div class="beds">'+r.beds+'</div><p>'+r.desc+'</p><div class="mphotos">'+i+'</div>';document.getElementById('roomModal').classList.add('open');document.body.style.overflow='hidden';}
+  function closeRoom(){document.getElementById('roomModal').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeRoom();});
+</script>
+
+</body>
+</html>
