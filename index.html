@@ -6,6 +6,10 @@
 <title>Art &amp; Heart · Apartment in Béziers, South of France</title>
 <meta name="description" content="Art & Heart — a beautifully renovated 14th-century apartment in the historic heart of Béziers, South of France. Sleeps up to 7. Book on Booking.com or Airbnb.">
 <link rel="canonical" href="https://www.artandheartbeziers.com/">
+<link rel="alternate" hreflang="en" href="https://www.artandheartbeziers.com/">
+<link rel="alternate" hreflang="fr" href="https://www.artandheartbeziers.com/fr/">
+<link rel="alternate" hreflang="es" href="https://www.artandheartbeziers.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://www.artandheartbeziers.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Art & Heart Béziers">
 <meta name="theme-color" content="#574272">
@@ -104,6 +108,9 @@
   .brand small{display:block;font-family:'Segoe UI',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--terra)}
   .topbar .book-mini{margin-left:auto;display:flex;gap:7px}
   .menu-btn{background:none;border:1px solid var(--line);border-radius:8px;padding:7px 11px;color:var(--plum);font-size:.85rem;cursor:pointer}
+  .langs{display:flex;gap:2px;align-items:center;font-size:.76rem;font-weight:700}
+  .langs a{padding:4px 7px;border-radius:7px;color:var(--muted);text-decoration:none}
+  .langs a.active{background:var(--lav-tint);color:var(--plum)}
   nav.drawer{display:none;border-top:1px solid var(--line);background:var(--cream)}
   nav.drawer.open{display:block}
   nav.drawer a{display:block;padding:11px 18px;border-bottom:1px solid var(--line);color:var(--ink);font-size:.95rem}
@@ -217,6 +224,7 @@
   <div class="row">
     <div class="brand">Art &amp; Heart<small>South of France · Béziers</small></div>
     <div class="book-mini">
+      <div class="langs" aria-label="Language"><a href="/" class="active" hreflang="en">EN</a><a href="/fr/" hreflang="fr">FR</a><a href="/es/" hreflang="es">ES</a></div>
       <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
       <a class="bookbtn airbnb small" href="#book">Book</a>
     </div>

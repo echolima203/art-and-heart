@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art &amp; Heart · Guide d'accueil · Sud de la France</title>
+<meta name="description" content="Votre guide d'accueil numérique pour Art & Heart, un appartement du XIVe siècle rénové au centre historique de Béziers, dans le Sud de la France.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#574272">
+<link rel="canonical" href="https://www.artandheartbeziers.com/fr/guide.html">
+
+<!-- Icons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root{
+    --lavender:#8b7cb0;
+    --lavender-dk:#675591;
+    --plum:#574272;
+    --olive:#869a5b;
+    --terra:#c97a48;
+    --ochre:#d79a4f;
+    --wine:#8e3a52;
+    --sea:#4a89a8;
+    --sand:#ece0c9;
+    --sand-lt:#f7efe0;
+    --lav-tint:#f3eef7;
+    --cream:#fdfaf3;
+    --ink:#4b4136;
+    --muted:#8b7d6c;
+    --line:#e8ddc8;
+    --shadow:0 10px 34px rgba(87,66,114,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:66px}
+  body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:600;line-height:1.2;color:var(--plum)}
+  a{color:var(--wine);text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* Top bar */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(253,250,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .topbar .row{display:flex;align-items:center;gap:10px;max-width:1080px;margin:0 auto;padding:10px 18px}
+  .brand{font-family:Georgia,serif;font-weight:700;color:var(--plum);font-size:1.05rem;letter-spacing:.5px}
+  .brand small{display:block;font-family:'Segoe UI',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--terra)}
+  .menu-btn{margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 11px;color:var(--plum);font-size:.85rem;cursor:pointer}
+  .langs{display:flex;gap:2px;align-items:center;font-size:.76rem;font-weight:700}
+  .langs a{padding:4px 7px;border-radius:7px;color:var(--muted);text-decoration:none}
+  .langs a.active{background:var(--lav-tint);color:var(--plum)}
+  nav.drawer{display:none;border-top:1px solid var(--line);background:var(--cream)}
+  nav.drawer.open{display:block}
+  nav.drawer a{display:block;padding:11px 18px;border-bottom:1px solid var(--line);color:var(--ink);font-size:.95rem}
+  nav.drawer a:active{background:var(--lav-tint)}
+
+  /* Hero with photo */
+  .hero{position:relative;color:#fff;text-align:center;padding:78px 18px 84px;
+    background:linear-gradient(rgba(72,52,104,.58),rgba(142,58,82,.5)),url('/images/beziers.jpg') center 40%/cover;}
+  .hero .sprig{margin:0 auto 6px;display:block;opacity:.9}
+  .hero .crest{font-size:.68rem;letter-spacing:4px;text-transform:uppercase;color:#f3d9c4}
+  .hero h1{color:#fff;font-size:2.3rem;margin:10px 0 8px;text-shadow:0 2px 18px rgba(40,25,55,.45)}
+  .hero .sub{font-size:1rem;opacity:.96;max-width:540px;margin:0 auto;text-shadow:0 1px 10px rgba(40,25,55,.5)}
+  .hero .badges{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);border-radius:30px;padding:7px 14px;font-size:.8rem;backdrop-filter:blur(3px)}
+  .badge b{color:#fff}
+
+  section{padding:40px 0}
+  section.alt{background:var(--lav-tint)}
+  section.sand{background:var(--sand-lt)}
+  .eyebrow{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:6px}
+  h2{font-size:1.55rem;margin-bottom:4px}
+  .lead{color:var(--muted);margin-bottom:22px;max-width:760px}
+
+  /* Quick cards */
+  .quick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:-50px;position:relative;z-index:5}
+  .qcard{background:#fff;border-radius:14px;padding:16px;box-shadow:var(--shadow);border:1px solid var(--line);border-top:3px solid var(--lavender)}
+  .qcard .k{font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .qcard .v{font-family:Georgia,serif;font-size:1.12rem;color:var(--plum);margin-top:3px;word-break:break-word}
+  .qcard .v small{font-size:.8rem;color:var(--muted);font-family:'Segoe UI',sans-serif}
+  .qcard.full{grid-column:1/-1;border-top-color:var(--terra)}
+  .copy{background:var(--lav-tint);border:1px dashed var(--lavender);border-radius:9px;padding:8px 10px;margin-top:8px;font-family:'Courier New',monospace;font-size:1.05rem;color:var(--plum);font-weight:700;letter-spacing:1px}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .btn{display:inline-flex;align-items:center;gap:7px;background:var(--terra);color:#fff;padding:11px 16px;border-radius:30px;font-size:.9rem;font-weight:600}
+  .btn.ghost{background:#fff;color:var(--wine);border:1px solid var(--wine)}
+  .btn.lav{background:var(--lavender-dk)}
+  .btn.sea{background:var(--sea)}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+  .card h3{font-size:1.12rem;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+  .ico{flex:0 0 30px;width:30px;height:30px;border-radius:8px;background:var(--lav-tint);display:inline-flex;align-items:center;justify-content:center;font-size:1rem}
+  .steps{counter-reset:s;list-style:none;margin-top:6px}
+  .steps li{counter-increment:s;position:relative;padding:6px 0 6px 34px;border-bottom:1px dashed var(--line)}
+  .steps li:last-child{border-bottom:none}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:6px;width:22px;height:22px;background:var(--terra);color:#fff;border-radius:50%;font-size:.75rem;display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;font-weight:700}
+  ul.ticks{list-style:none;margin-top:6px}
+  ul.ticks li{padding:5px 0 5px 26px;position:relative}
+  ul.ticks li:before{content:"✦";position:absolute;left:0;color:var(--olive);font-weight:700}
+  .pillbox{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+  .pill{background:var(--sand-lt);border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:.82rem;color:var(--ink)}
+  .note{background:#fbf3e8;border-left:3px solid var(--ochre);border-radius:0 8px 8px 0;padding:11px 13px;font-size:.9rem;color:#7a5f3c;margin-top:10px}
+
+  /* Rooms */
+  .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .room{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s,box-shadow .15s;border-top:3px solid var(--ochre)}
+  .room:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(87,66,114,.18)}
+  .room .rn{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .room .rt{font-family:Georgia,serif;color:var(--plum);font-size:1rem;margin:4px 0}
+  .room .rd{font-size:.82rem;color:var(--muted)}
+  .room .more{font-size:.72rem;color:var(--wine);font-weight:700;margin-top:9px}
+
+  /* Modal */
+  .modal{position:fixed;inset:0;background:rgba(57,42,80,.55);backdrop-filter:blur(3px);z-index:100;display:none;padding:18px;overflow-y:auto}
+  .modal.open{display:flex;align-items:flex-start;justify-content:center}
+  .sheet{background:#fff;max-width:560px;width:100%;border-radius:18px;padding:22px;margin:auto;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.3);animation:pop .2s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .sheet .x{position:absolute;top:12px;right:14px;width:34px;height:34px;border:none;border-radius:50%;background:var(--lav-tint);color:var(--plum);font-size:1.2rem;cursor:pointer;line-height:1}
+  .sheet .rn{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .sheet h3{font-size:1.5rem;margin:3px 0 2px}
+  .sheet .beds{color:var(--wine);font-weight:600;font-size:.95rem;margin-bottom:10px}
+  .sheet p{font-size:.95rem;color:var(--ink);line-height:1.65}
+  .sheet .mphotos{display:grid;gap:10px;margin-top:14px}
+  .sheet .mphotos img{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+
+  /* Gallery */
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .tile{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--sand);box-shadow:var(--shadow)}
+  .tile .label{position:absolute;inset:0;display:flex;align-items:flex-end;padding:10px;color:#fff;font-size:.82rem;font-weight:600;background:linear-gradient(transparent 45%,rgba(57,42,80,.6));z-index:1}
+  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+
+  /* Recommendations */
+  .rec{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin-bottom:11px;box-shadow:var(--shadow)}
+  .rec h4{font-family:Georgia,serif;color:var(--plum);font-size:1.02rem;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .rec .tag{font-size:.64rem;letter-spacing:1px;text-transform:uppercase;background:var(--lav-tint);color:var(--lavender-dk);padding:2px 8px;border-radius:12px;font-weight:700}
+  .rec p{font-size:.9rem;color:var(--muted);margin-top:4px}
+  .rec .dist{font-size:.8rem;color:var(--olive);font-weight:700;margin-top:5px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+
+  /* Quiz */
+  .qq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);margin-bottom:12px}
+  .qq .qn{font-family:Georgia,serif;color:var(--plum);font-size:1.05rem;margin-bottom:10px}
+  .qq .qn b{color:var(--terra);font-style:normal}
+  .qopt{display:block;width:100%;text-align:left;background:var(--sand-lt);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:6px 0;font-size:.92rem;color:var(--ink);cursor:pointer;transition:.15s;font-family:inherit}
+  .qopt:hover:not(:disabled){background:var(--lav-tint)}
+  .qopt.correct{background:#e8f0da;border-color:var(--olive);color:#4d5e2a;font-weight:700}
+  .qopt.wrong{background:#f6e2e6;border-color:var(--wine);color:var(--wine)}
+  .qopt:disabled{cursor:default}
+  .qexpl{display:none;margin-top:8px;font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:10px}
+  .qexpl.show{display:block}
+  #quizscore{font-size:1rem;text-align:center}
+
+  /* Photos */
+  .banner{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:6px 0 20px;position:relative}
+  .banner img{width:100%;height:230px;object-fit:cover}
+  .banner .cap{position:absolute;left:0;bottom:0;right:0;padding:14px;color:#fff;font-family:Georgia,serif;background:linear-gradient(transparent,rgba(57,42,80,.78));font-size:1.05rem}
+  .feature{border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin:18px auto;position:relative;max-width:330px}
+  .feature img{width:100%;height:auto}
+  .feature .cap{position:absolute;left:0;bottom:0;right:0;padding:10px 12px;color:#fff;font-family:Georgia,serif;background:linear-gradient(transparent,rgba(57,42,80,.78));font-size:.9rem}
+  .recimg{border-radius:12px;box-shadow:var(--shadow);margin-top:10px;width:100%;height:170px;object-fit:cover}
+
+  footer{position:relative;color:#fbeede;text-align:center;padding:44px 18px 46px;
+    background:linear-gradient(rgba(57,42,80,.82),rgba(57,42,80,.82)),url('/images/cathedral-sunset.jpg') center/cover}
+  footer h3{color:#fff;font-size:1.35rem}
+  footer p{font-size:.9rem;opacity:.92;margin-top:6px}
+  footer .fbtn{display:inline-flex;gap:7px;margin-top:16px;background:var(--terra);color:#fff;padding:12px 20px;border-radius:30px;font-weight:600}
+  footer small{display:block;margin-top:22px;opacity:.7;font-size:.75rem}
+
+  @media(min-width:640px){.hero h1{font-size:2.9rem}.gal{grid-template-columns:1fr 1fr 1fr}}
+  @media(min-width:860px){
+    .quick{grid-template-columns:1fr 1fr 1fr}
+    .wide .wrap{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;align-items:start}
+    .wide .wrap > .eyebrow,.wide .wrap > h2,.wide .wrap > .lead,.wide .wrap > .note,.wide .wrap > .banner{grid-column:1/-1}
+    .wide .rec,.wide .card{margin-bottom:14px;break-inside:avoid}
+  }
+  @media(max-width:430px){.quick{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="row">
+    <div class="brand">Art &amp; Heart<small>Sud de la France · Béziers</small></div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
+      <div class="langs" aria-label="Langue"><a href="/guide.html" hreflang="en">EN</a><a href="/fr/guide.html" class="active" hreflang="fr">FR</a><a href="/es/guide.html" hreflang="es">ES</a></div>
+      <button class="menu-btn" style="margin-left:0" onclick="document.getElementById('nav').classList.toggle('open')">☰ Menu</button>
+    </div>
+  </div>
+  <nav class="drawer" id="nav" onclick="this.classList.remove('open')">
+    <a href="#essentials">Arrivée &amp; essentiel</a>
+    <a href="#wifi">WiFi &amp; infos rapides</a>
+    <a href="#apartment">L'appartement</a>
+    <a href="#manual">Comment tout fonctionne</a>
+    <a href="#rules">Règles de la maison</a>
+    <a href="#checkout">Avant de partir</a>
+    <a href="#getting-here">Accès &amp; stationnement</a>
+    <a href="#discover">Découvrir Béziers</a>
+    <a href="#eat">Où manger</a>
+    <a href="#beaches">Plages &amp; excursions</a>
+    <a href="#wine">Routes des vins</a>
+    <a href="#bike">Vélo le long du Canal du Midi</a>
+    <a href="#" onclick="openQuiz();return false;">Quiz Béziers</a>
+    <a href="#contact">Contact &amp; longs séjours</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <svg class="sprig" width="26" height="40" viewBox="0 0 26 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M13 40 V14" stroke="#e9d6b8" stroke-width="2" fill="none"/>
+    <g fill="#d9b9e0">
+      <ellipse cx="13" cy="9" rx="3" ry="5"/><ellipse cx="8" cy="15" rx="2.4" ry="4" transform="rotate(-25 8 15)"/>
+      <ellipse cx="18" cy="15" rx="2.4" ry="4" transform="rotate(25 18 15)"/><ellipse cx="9" cy="22" rx="2.2" ry="3.6" transform="rotate(-25 9 22)"/>
+      <ellipse cx="17" cy="22" rx="2.2" ry="3.6" transform="rotate(25 17 22)"/>
+    </g>
+  </svg>
+  <div class="crest">✦ Hôtel de Guibal · Un joyau du XIVe siècle ✦</div>
+  <h1>Bienvenue dans votre maison<br>du Sud de la France</h1>
+  <p class="sub">Champs de lavande, vignobles, plages méditerranéennes et pierre dorée — et un bel appartement rénové au cœur de tout cela.</p>
+  <div class="badges">
+    <div class="badge">★ <b>9/10</b> sur Booking.com</div>
+    <div class="badge">📍 <b>9,8</b> pour l'emplacement</div>
+    <div class="badge">💑 <b>9,8</b> pour les couples</div>
+    <div class="badge">🛠️ Rénové en <b>2025</b></div>
+  </div>
+</header>
+
+<section id="essentials">
+  <div class="wrap">
+    <div class="quick">
+      <div class="qcard">
+        <div class="k">Adresse</div>
+        <div class="v">29 Rue du 4 Septembre<br><small>34500 Béziers — à côté de la Mairie et à côté du commissariat de police</small></div>
+      </div>
+      <div class="qcard">
+        <div class="k">Départ</div>
+        <div class="v">11h00<br><small>Voir la check-list ci-dessous</small></div>
+      </div>
+      <div class="qcard full">
+        <div class="k">À l'arrivée — appelez d'abord votre hôte</div>
+        <div class="v">Bouchra · Come &amp; Rest Conciergerie</div>
+        <p style="font-size:.88rem;color:var(--muted);margin-top:6px">Merci d'appeler <b>environ 30 minutes avant votre arrivée</b>. Vous serez accueilli en personne, on vous fera visiter et on vous remettra les clés.</p>
+        <div class="btnrow">
+          <a class="btn" href="tel:+33618537843">📞 Appeler Bouchra</a>
+          <a class="btn ghost" href="https://wa.me/33618537843">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wifi" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Restez connecté</div>
+    <h2>WiFi &amp; infos rapides</h2>
+    <p class="lead">Se connecter est facile. Il y a aussi un câble Ethernet au bureau pour une connexion filaire.</p>
+    <div class="card">
+      <h3><span class="ico">📶</span> Réseau sans fil</h3>
+      <p style="font-size:.92rem;color:var(--muted)">Le nom du réseau WiFi et le mot de passe sont affichés dans l'appartement — sur la carte de bienvenue et sur l'étiquette au dos de la box Bbox. Vous pouvez aussi simplement scanner le QR code sur la box pour vous connecter automatiquement.</p>
+    </div>
+    <div class="grid2">
+      <div class="card" style="margin-bottom:0">
+        <h3 style="font-size:1rem"><span class="ico">🔌</span> Internet filaire</h3>
+        <p style="font-size:.88rem;color:var(--muted)">Un câble Ethernet est fourni à l'espace de travail dédié pour des visios rapides et stables.</p>
+      </div>
+      <div class="card" style="margin-bottom:0">
+        <h3 style="font-size:1rem"><span class="ico">📺</span> TV &amp; streaming</h3>
+        <p style="font-size:.88rem;color:var(--muted)">Smart TV avec Netflix et applications de streaming — connectez-vous avec votre propre compte et déconnectez-vous avant de partir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apartment">
+  <div class="wrap">
+    <div class="eyebrow">Votre espace</div>
+    <h2>L'appartement</h2>
+    <p class="lead">Spacieux (80 m² / ~860 sq ft), lumineux et récemment rénové, installé dans le prestigieux Hôtel de Guibal — l'ancien hôtel de ville — avec parquet et vue sur la cour en pierre partagée de l'immeuble. Avec deux chambres plus un canapé-lit, c'est l'idéal pour les <b>familles et groupes d'amis</b> : très confortable pour <b>4 à 5 personnes</b>, et peut coucher <b>6 à 7</b> au besoin (un peu plus serré).</p>
+
+    <div class="rooms">
+      <div class="room" role="button" tabindex="0" onclick="openRoom('bed1')" onkeypress="if(event.key==='Enter')openRoom('bed1')"><div class="rn">Chambre 1</div><div class="rt">1 lit double</div><div class="rd">Fresque tropicale · cheminée en marbre</div><div class="more">Voir les détails →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('bed2')" onkeypress="if(event.key==='Enter')openRoom('bed2')"><div class="rn">Chambre 2</div><div class="rt">Canapé-lit, lit simple + bureau</div><div class="rd">Le canapé du bas se transforme en lit double · lit parapluie dispo</div><div class="more">Voir les détails →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('living')" onkeypress="if(event.key==='Enter')openRoom('living')"><div class="rn">Salon</div><div class="rt">1 canapé-lit</div><div class="rd">Couche 2 personnes de plus</div><div class="more">Voir les détails →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('kitchen')" onkeypress="if(event.key==='Enter')openRoom('kitchen')"><div class="rn">Cuisine</div><div class="rt">Entièrement équipée</div><div class="rd">Four · plaque à induction · Nespresso</div><div class="more">Voir les détails →</div></div>
+      <div class="room" role="button" tabindex="0" onclick="openRoom('bathroom')" onkeypress="if(event.key==='Enter')openRoom('bathroom')"><div class="rn">Salle de bain</div><div class="rt">Douche à l'italienne</div><div class="rd">Lave-linge · sèche-cheveux · serviettes</div><div class="more">Voir les détails →</div></div>
+    </div>
+
+    <h3 style="font-size:1.1rem;margin:18px 0 8px;color:var(--plum)">Visite en photos</h3>
+    <div class="gal">
+      <div class="tile"><span class="label">Salon &amp; salle à manger</span><img src="/images/living-wide.jpg" alt="Salon et salle à manger" loading="lazy"></div>
+      <div class="tile"><span class="label">Coin salon &amp; canapé</span><img src="/images/salon.jpg" alt="Salon" loading="lazy"></div>
+      <div class="tile"><span class="label">Coin détente</span><img src="/images/living-cosy.jpg" alt="Coin canapé" loading="lazy"></div>
+      <div class="tile"><span class="label">Cuisine</span><img src="/images/kitchen.jpg" alt="Cuisine" loading="lazy"></div>
+      <div class="tile"><span class="label">Chambre 1</span><img src="/images/bedroom1.jpg" alt="Chambre 1" loading="lazy"></div>
+      <div class="tile"><span class="label">Chambre 2</span><img src="/images/bedroom2.jpg" alt="Chambre 2" loading="lazy"></div>
+      <div class="tile"><span class="label">Salle de bain</span><img src="/images/bathroom.jpg" alt="Salle de bain" loading="lazy"></div>
+      <div class="tile"><span class="label">Bureau</span><img src="/images/workspace.jpg" alt="Espace de travail" loading="lazy"></div>
+      <div class="tile"><span class="label">Cour intérieure</span><img src="/images/courtyard2.jpg" alt="Cour" loading="lazy"></div>
+      <div class="tile"><span class="label">Détails Art &amp; Heart</span><img src="/images/living-room.jpg" alt="Détail Art and Heart" loading="lazy"></div>
+    </div>
+
+    <h3 style="font-size:1.1rem;margin:22px 0 4px;color:var(--plum)">Tout est inclus</h3>
+    <div class="pillbox">
+      <span class="pill">WiFi</span><span class="pill">Ethernet</span><span class="pill">Smart TV</span>
+      <span class="pill">Cuisine équipée</span><span class="pill">Four</span><span class="pill">Plaque à induction</span>
+      <span class="pill">Micro-ondes</span><span class="pill">Réfrigérateur &amp; congélateur</span><span class="pill">Machine Nespresso</span>
+      <span class="pill">Bouilloire &amp; grille-pain</span><span class="pill">Basiques de cuisine</span><span class="pill">Vaisselle &amp; couverts</span>
+      <span class="pill">Verres à vin</span><span class="pill">Table à manger</span><span class="pill">Espace de travail dédié</span>
+      <span class="pill">Lave-linge</span><span class="pill">Fer à repasser</span><span class="pill">Sèche-cheveux</span>
+      <span class="pill">Chauffage</span><span class="pill">2 ventilateurs</span><span class="pill">Linge de lit 100 % coton</span>
+      <span class="pill">Serviettes</span><span class="pill">Cintres &amp; rangements</span><span class="pill">Lit parapluie &amp; matelas</span>
+      <span class="pill">Trousse de secours</span><span class="pill">Détecteur de fumée</span><span class="pill">Produits d'entretien</span>
+      <span class="pill">Parking public à proximité (payant)</span>
+    </div>
+  </div>
+</section>
+
+<section id="manual" class="sand wide">
+  <div class="wrap">
+    <div class="eyebrow">Votre manuel numérique</div>
+    <h2>Comment tout fonctionne</h2>
+    <p class="lead">Un guide rapide des appareils et de l'emplacement des choses. Faites comme chez vous.</p>
+
+    <div class="card">
+      <h3><span class="ico">☕</span> Café — Krups Nespresso</h3>
+      <ol class="steps">
+        <li>Soulevez le levier sur le dessus, insérez une capsule, refermez le levier.</li>
+        <li>Placez une tasse en dessous (les tasses sont sur le présentoir doré du plan de travail).</li>
+        <li>Appuyez sur le bouton — appui court pour un espresso, plus long pour une grande tasse.</li>
+        <li>Soulevez à nouveau le levier pour éjecter la capsule usagée dans le bac intérieur.</li>
+      </ol>
+      <div class="note">Une bouilloire, un grille-pain et du thé sont aussi sur le plan de travail. Café, sel, poivre et huile de cuisson sont fournis pour démarrer.</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">🍳</span> Cuisine — plaque, four &amp; micro-ondes</h3>
+      <ul class="ticks">
+        <li><b>Plaque à induction :</b> touchez le symbole d'alimentation, sélectionnez un foyer, puis utilisez + / − pour régler la chaleur. Elle ne chauffe qu'avec une casserole posée dessus.</li>
+        <li><b>Four :</b> tournez les boutons de fonction et de température ; le voyant indique qu'il est allumé.</li>
+        <li><b>Le micro-ondes</b> est au-dessus du plan de travail. Casseroles, poêles, assiettes, bols, verres et ustensiles sont dans les placards et tiroirs en dessous.</li>
+        <li>Torchons et linges de cuisine sont pliés près de la plaque ; le liquide vaisselle est près de l'évier.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">🧺</span> Lave-linge</h3>
+      <ol class="steps">
+        <li>Chargez le linge, ajoutez la lessive dans le bac.</li>
+        <li>Sélectionnez un programme (40° coton convient pour la plupart des lessives) et appuyez sur départ.</li>
+        <li>Attendez le déverrouillage de la porte à la fin avant d'ouvrir.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">🌡️</span> Chauffage &amp; rester au frais</h3>
+      <ul class="ticks">
+        <li>Radiateurs électriques dans chaque pièce — réglez la molette ou le panneau selon vos envies.</li>
+        <li>L'appartement reste frais en été grâce aux épais murs de pierre historiques ; pensez à fermer les volets aux heures les plus chaudes. Deux ventilateurs portatifs sont également fournis.</li>
+        <li>Le sèche-cheveux et le fer à repasser sont dans le rangement de la chambre ; une trousse de secours se trouve côté salle de bain/cuisine.</li>
+        <li>Les lits sont faits avec du linge <b>100 % coton</b>. Des <b>serviettes supplémentaires</b> sont dans l'armoire de la 2e chambre (à droite).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">💻</span> Espace télétravail</h3>
+      <p style="font-size:.9rem;color:var(--muted)">Un espace de travail dédié est installé pour le télétravail — un bureau avec chaise de bureau, une lampe et un écran/moniteur, plus une prise et le câble Ethernet pour une connexion rapide et stable.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">🗝️</span> Clés, cour &amp; accès</h3>
+      <p style="font-size:.9rem;color:var(--muted)">Vous entrez par la cour historique en pierre (patio) de l'Hôtel de Guibal, partagée avec la galerie d'art Espace Lally. L'appartement est au <b>1er étage</b> — un seul escalier et vous y êtes. Poussettes et landaus peuvent être laissés sous l'escalier dans le patio. Merci de garder la porte sur rue et la porte de l'appartement fermées, et de rester discret en traversant la cour, surtout la nuit.</p>
+    </div>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <div class="eyebrow">Quelques demandes</div>
+    <h2>Règles de la maison</h2>
+    <div class="grid2">
+      <div class="card" style="margin-bottom:0"><h3 style="font-size:1rem"><span class="ico">🚭</span> Non-fumeur à l'intérieur</h3><p style="font-size:.88rem;color:var(--muted)">Merci de fumer dehors uniquement.</p></div>
+      <div class="card" style="margin-bottom:0"><h3 style="font-size:1rem"><span class="ico">🐾</span> Pas d'animaux</h3><p style="font-size:.88rem;color:var(--muted)">Désolé — pas d'animaux dans ce logement.</p></div>
+      <div class="card" style="margin-bottom:0"><h3 style="font-size:1rem"><span class="ico">🤫</span> Calme &amp; respect</h3><p style="font-size:.88rem;color:var(--muted)">C'est un immeuble historique résidentiel — merci de garder le calme la nuit.</p></div>
+      <div class="card" style="margin-bottom:0"><h3 style="font-size:1rem"><span class="ico">🧹</span> Gardez les lieux propres</h3><p style="font-size:.88rem;color:var(--muted)">Prenez soin du logement et détendez-vous — faites-en le vôtre.</p></div>
+    </div>
+    <div class="note">N'hésitez pas à utiliser tout ce qui est fourni — nous voulons que vous vous sentiez chez vous. Si quelque chose se casse, dites-le-nous simplement ; nous comprenons que les accidents arrivent.</div>
+  </div>
+</section>
+
+<section id="checkout" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Départ</div>
+    <h2>Avant de partir · 11h00</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>Fermez toutes les fenêtres et les volets.</li>
+        <li>Éteignez toutes les lumières et les appareils.</li>
+        <li>Sortez les poubelles vers les bacs de la rue.</li>
+        <li>Déconnectez-vous de Netflix / des comptes de streaming sur la TV.</li>
+        <li>Laissez les clés comme convenu avec Bouchra et tirez bien la porte.</li>
+      </ol>
+      <div class="note">Merci de prendre soin de notre maison. Nous espérons que vous avez passé un séjour merveilleux !</div>
+    </div>
+  </div>
+</section>
+
+<section id="getting-here">
+  <div class="wrap">
+    <div class="eyebrow">Arrivée &amp; transport</div>
+    <h2>Accès &amp; stationnement</h2>
+
+    <div class="banner">
+      <img src="/images/mairie.jpg" alt="Place de la Mairie, Béziers" loading="lazy">
+      <div class="cap">Place de la Mairie — votre porte d'entrée est juste ici</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">📍</span> L'adresse</h3>
+      <p style="font-size:.92rem">29 Rue du 4 Septembre, 34500 Béziers — juste à côté de la Mairie et du commissariat, dans le centre historique piéton.</p>
+      <div class="btnrow">
+        <a class="btn sea" href="https://maps.google.com/?q=31+Rue+du+4+Septembre+34500+Béziers" target="_blank">🗺️ Ouvrir dans Google Maps</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">✈️</span> En avion — Aéroport Béziers Cap d'Agde</h3>
+      <p style="font-size:.9rem;color:var(--muted)">À seulement ~11,5 km (7 mi) au sud-est de la ville. Vols directs depuis Londres, Bruxelles, Paris, Düsseldorf et plus. Une navette part environ 30 minutes après chaque arrivée de vol et rejoint la gare routière de Béziers en 30 minutes environ. Des taxis sont aussi disponibles.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card" style="margin-bottom:0">
+        <h3 style="font-size:1rem"><span class="ico">🚆</span> En train</h3>
+        <p style="font-size:.88rem;color:var(--muted)">La gare de Béziers est sur la ligne principale — trains directs vers Montpellier, Carcassonne (~45 min) et au-delà. À environ 15 minutes à pied ou un court taxi de l'appartement.</p>
+      </div>
+      <div class="card" style="margin-bottom:0">
+        <h3 style="font-size:1rem"><span class="ico">🅿️</span> Stationnement</h3>
+        <p style="font-size:.88rem;color:var(--muted)">L'appartement est en zone piétonne et il n'y a pas de parking privé. Le parking public le plus proche est <b>Parking Les Halles 2</b>, à quelques minutes à pied — environ <b>14 € par nuit</b>. Demandez à Bouchra si vous avez besoin d'aide pour décharger à l'arrivée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="discover" class="sand wide">
+  <div class="wrap">
+    <div class="eyebrow">Explorer</div>
+    <h2>Découvrir Béziers</h2>
+    <div class="banner">
+      <img src="/images/cathedral-sunset.jpg" alt="Cathédrale Saint-Nazaire au coucher du soleil" loading="lazy">
+      <div class="cap">Cathédrale Saint-Nazaire au-dessus de l'Orb — à 4 minutes à pied</div>
+    </div>
+    <p class="lead">L'une des plus anciennes villes de France — connue pour sa culture du vin, son architecture remarquable et le Canal du Midi classé à l'UNESCO. Plages méditerranéennes, vignobles et belle gastronomie, sans la foule. Presque tout ci-dessous est à quelques pas.</p>
+
+    <div class="rec">
+      <h4>Cathédrale Saint-Nazaire <span class="tag">4 min à pied</span></h4>
+      <p>Le monument perché de Béziers, reconstruit au XIIIe siècle. Entrée libre, intérieur magnifique, et vous pouvez gravir la tour pour des vues imprenables sur la vallée de l'Orb.</p>
+    </div>
+    <div class="rec">
+      <h4>Les 9 Écluses de Fonseranes <span class="tag">Canal du Midi</span></h4>
+      <p>Un spectaculaire « escalier d'eau » de huit écluses conçu par le héros local Pierre-Paul Riquet, élevant les bateaux de 21,5 m. L'un des sites les plus visités de la région — venez à l'ouverture pour voir passer les bateaux.</p>
+      <div class="dist">~3 km de l'appartement</div>
+    </div>
+    <div class="rec">
+      <h4>Les Halles — marché couvert <span class="tag">★ Plus beau marché de France</span></h4>
+      <p>La halle en fonte de 1891, magnifiquement restaurée et rouverte fin 2024 — et élue <b>Plus Beau Marché de France 2025</b> ! Ouvert du mardi au dimanche (fermé le lundi) pour produits frais, huîtres, fromages et un verre de vin local au bar.</p>
+      <div class="dist">~5 min à pied</div>
+    </div>
+    <div class="rec" style="background:linear-gradient(135deg,var(--lavender-dk),var(--plum));color:#fff;border-color:transparent;text-align:center">
+      <h4 style="color:#fff;justify-content:center">🧠 Connaissez-vous bien Béziers ?</h4>
+      <p style="color:#efe6f5;margin-top:4px">Un petit quiz sur la ville — passé &amp; présent.</p>
+      <button class="btn" style="margin-top:10px" onclick="openQuiz()">Jouer au quiz →</button>
+    </div>
+    <div class="rec">
+      <h4>Cours / centre piéton <span class="tag">Flâner &amp; shopping</span></h4>
+      <p>Flânez dans les jolies rues du centre — boutiques, terrasses de café et, l'été, les fameux parasols colorés tendus au-dessus.</p>
+      <img class="recimg" src="/images/street.jpg" alt="Rue piétonne de Béziers" loading="lazy">
+    </div>
+    <div class="rec">
+      <h4>Le Pont Vieux &amp; les berges <span class="tag">Spot photo</span></h4>
+      <p>Le « Pont Vieux » du XIIe siècle sur l'Orb offre la vue carte postale de la cathédrale dominant la ville — au mieux à l'heure dorée.</p>
+    </div>
+    <div class="note">🎉 <b>Feria de Béziers</b> — chaque mois d'août, la ville s'embrase pour sa fameuse fête de cinq jours : fêtes de rue, flamenco, musique et plus d'un million de visiteurs. Si vous êtes là en août, réservez les restaurants à l'avance et attendez-vous à une ambiance animée jour et nuit.
+    <img class="recimg" src="/images/feria.jpg" alt="Arènes de la Féria de Béziers" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="eat" class="wide">
+  <div class="wrap">
+    <div class="eyebrow">Goûter le Sud</div>
+    <h2>Où manger &amp; boire</h2>
+    <div class="banner">
+      <img src="/images/cours-guibal.jpg" alt="Terrasse de café, Cour Guibal" loading="lazy">
+      <div class="cap">Des terrasses de café nichées dans les cours de la vieille ville</div>
+    </div>
+    <p class="lead">Les places de la vieille ville regorgent de terrasses. Quelques favoris pour commencer — tous à quelques pas.</p>
+
+    <div class="rec">
+      <h4>L'Orangerie <span class="tag">Brasserie</span></h4>
+      <p>Brasserie chaleureuse avec une jolie terrasse au cœur du centre — plats régionaux et une belle carte de vins du Sud.</p>
+    </div>
+    <div class="rec">
+      <h4>Le Petit Montmartre <span class="tag">Français</span></h4>
+      <p>Sur la jolie place de la Madeleine, à côté de l'église du XVe siècle. La tradition rencontre la créativité — les viandes du boucher et le canard sont des favoris locaux.</p>
+    </div>
+    <div class="rec">
+      <h4>Les Caves de la Madeleine <span class="tag">Authentique</span></h4>
+      <p>Une adresse charmante pour une cuisine française classique — agneau, foie gras et une ambiance chaleureuse.</p>
+    </div>
+    <div class="rec">
+      <h4>L'Octopus <span class="tag">★ Michelin</span></h4>
+      <p>Pour une soirée spéciale — l'adresse étoilée de Béziers, avec des menus dégustation modernes et raffinés. Réservez bien à l'avance.</p>
+    </div>
+    <div class="rec">
+      <h4>Autour des Halles &amp; des places <span class="tag">Décontracté</span></h4>
+      <p>Pour le déjeuner, rejoignez la halle et les places voisines — tapas, huîtres, pizza et vin local au verre.</p>
+    </div>
+    <div class="note">🍷 Vous êtes au cœur du <b>vignoble du Languedoc</b> — cherchez les rouges et rosés locaux de Saint-Chinian, Faugères et le Picpoul de Pinet (le blanc vif parfait avec les huîtres).</div>
+  </div>
+</section>
+
+<section id="beaches" class="alt wide">
+  <div class="wrap">
+    <div class="eyebrow">Mer, soleil &amp; excursions</div>
+    <h2>Plages &amp; excursions</h2>
+    <div class="banner">
+      <img src="/images/beach.jpg" alt="Plage de Valras-Plage avec palmiers" loading="lazy">
+      <div class="cap">Valras-Plage — 4 km de sable doré méditerranéen</div>
+    </div>
+
+    <div class="rec">
+      <h4>Valras-Plage <span class="tag">Plage</span></h4>
+      <p>Une charmante station méditerranéenne avec 4 km de plage de sable fin, une eau calme et un front de mer animé — idéal pour les familles. Transats, sports nautiques et cafés de plage en été.</p>
+      <div class="dist">~14 km · 20 min en voiture</div>
+    </div>
+    <div class="rec">
+      <h4>Sète <span class="tag">Excursion</span></h4>
+      <p>La « Venise du Languedoc » — canaux, port de pêche et fruits de mer d'exception. Montez au Mont Saint-Clair pour la vue et visitez les Halles de Sète.</p>
+      <div class="dist">~55 km · 45 min</div>
+    </div>
+    <div class="rec">
+      <h4>Pézenas <span class="tag">Excursion</span></h4>
+      <p>L'une des plus jolies villes d'Occitanie — hôtels particuliers des XVIIe–XVIIIe siècles, antiquaires et l'histoire de Molière, entourée de vignobles.</p>
+      <div class="dist">~25 km · 25 min</div>
+    </div>
+    <div class="rec">
+      <h4>Carcassonne <span class="tag">UNESCO</span></h4>
+      <p>La légendaire cité médiévale fortifiée — l'une des plus impressionnantes d'Europe. Train direct facile depuis la gare de Béziers.</p>
+      <div class="dist">~45 min en train ou voiture</div>
+    </div>
+    <div class="rec">
+      <h4>Narbonne <span class="tag">Excursion</span></h4>
+      <p>Patrimoine romain, une grande cathédrale, des canaux et un superbe marché couvert (Les Halles de Narbonne).</p>
+      <div class="dist">~30 km · 30 min</div>
+    </div>
+    <div class="rec">
+      <h4>Saint-Guilhem-le-Désert <span class="tag">Village</span></h4>
+      <p>L'un des « Plus Beaux Villages de France » — un joyau médiéval avec une abbaye, dans les spectaculaires Gorges de l'Hérault. Parfait pour une randonnée et une baignade.</p>
+      <div class="dist">~1 h en voiture</div>
+    </div>
+  </div>
+</section>
+
+<section id="wine" class="wide">
+  <div class="wrap">
+    <div class="eyebrow">Vignobles &amp; dégustations</div>
+    <h2>Routes des vins</h2>
+    <p class="lead">Vous êtes au cœur du Languedoc — le plus grand vignoble du monde. Des excursions en minibus d'une demi-journée partent directement de Béziers, sillonnant les collines vers des domaines familiaux pour des dégustations guidées de 8 à 10 vins locaux. Demandez à Bouchra et nous vous aiderons volontiers à réserver.</p>
+    <div class="rec"><h4>Saint-Chinian <span class="tag">Rouges</span></h4><p>Des rouges riches et aromatiques et de superbes panoramas — l'une des appellations phares de la région.</p><div class="dist">~30–40 min</div></div>
+    <div class="rec"><h4>Faugères <span class="tag">Terroir de schiste</span></h4><p>Des rouges singuliers nés sur des sols de schiste — une escapade d'une demi-journée prisée depuis Béziers.</p><div class="dist">~30 min</div></div>
+    <div class="rec"><h4>Picpoul de Pinet <span class="tag">Blanc vif</span></h4><p>Le blanc vif local — l'accord classique avec les huîtres de Bouzigues de l'étang de Thau tout proche.</p><div class="dist">~30 min</div></div>
+    <div class="rec"><h4>Minervois <span class="tag">Rouges puissants</span></h4><p>Des rouges puissants et des vignobles pittoresques, avec dégustations dans des domaines familiaux accueillants.</p><div class="dist">~40 min</div></div>
+    <div class="note">🍷 Vous préférez rester en ville ? Le bar à vins des <b>Halles</b> et les caves de la vieille ville servent d'excellentes bouteilles locales au verre.</div>
+  </div>
+</section>
+
+<section id="bike" class="alt wide">
+  <div class="wrap">
+    <div class="eyebrow">À deux roues</div>
+    <h2>Balade à vélo — Canal du Midi</h2>
+    <p class="lead">Le Canal du Midi classé à l'UNESCO passe juste à côté de Béziers, ombragé de platanes et presque entièrement plat — une belle balade facile pour tous les niveaux. Des vélos peuvent être loués sur place ; demandez à Bouchra le loueur le plus proche.</p>
+    <div class="rec"><h4>Béziers → Capestang <span class="tag">~20 km</span></h4><p>Le tronçon le plus pittoresque — en passant par les 9 Écluses de Fonseranes, le pont-canal sur l'Orb, l'Oppidum d'Ensérune et le tunnel du Malpas (premier tunnel-canal navigable d'Europe).</p><div class="dist">Aller-retour en demi-journée</div></div>
+    <div class="rec"><h4>Béziers → la mer <span class="tag">Vers la Méditerranée</span></h4><p>Suivez le canal et les voies vertes vers le sud par Portiragnes, Vias et Agde jusqu'aux plages de la Méditerranée.</p><div class="dist">~25 km</div></div>
+    <div class="rec"><h4>Les 9 Écluses de Fonseranes <span class="tag">Incontournable</span></h4><p>Commencez votre balade ici et regardez les bateaux gravir le fameux « escalier d'eau » — à quelques minutes de l'appartement.</p><div class="dist">~3 km</div></div>
+    <div class="note">🚲 Le chemin de halage est en grande partie lisse mais parfois irrégulier — un vélo hybride ou de ville à pneus un peu larges est idéal. Emportez de l'eau et un chapeau en été.</div>
+  </div>
+</section>
+
+<footer id="contact">
+  <h3>Besoin de quelque chose pendant votre séjour ?</h3>
+  <p>Votre hôte <b>Bouchra</b> (Come &amp; Rest Conciergerie) et les deux propriétaires sont ravis de vous aider.<br>Pour une réponse rapide, écrivez-nous dans la messagerie de la plateforme de réservation. Pour un appel, joignez Bouchra directement.</p>
+  <a class="fbtn" href="tel:+33618537843">📞 +33 6 18 53 78 43</a>
+  <p style="margin-top:22px"><b>Vous restez plus longtemps ?</b> L'appartement est disponible en courts séjours d'avril à octobre et au mois pendant l'hiver. Demandez-nous les tarifs mensuels pour une escapade plus longue dans le Sud de la France.</p>
+  <small>Art &amp; Heart · 29 Rue du 4 Septembre, 34500 Béziers · Noté 9/10 sur Booking.com<br>Profitez de votre séjour et passez un moment fantastique à explorer le Sud de la France ! ✦</small>
+</footer>
+
+<div class="modal" id="roomModal" onclick="if(event.target===this)closeRoom()">
+  <div class="sheet" id="roomSheet" role="dialog" aria-modal="true"></div>
+</div>
+
+<div class="modal" id="quizModal" onclick="if(event.target===this)closeQuiz()">
+  <div class="sheet" id="quizSheet" role="dialog" aria-modal="true">
+    <button class="x" onclick="closeQuiz()" aria-label="Fermer">×</button>
+    <div class="rn">Juste pour le plaisir</div>
+    <h3>Connaissez-vous bien Béziers ?</h3>
+    <p style="font-size:.9rem;color:var(--muted);margin:4px 0 8px">Touchez une réponse pour voir si vous avez juste — passé &amp; présent.</p>
+    <div id="quizbox"></div>
+    <div id="quizscore" class="note" style="display:none"></div>
+  </div>
+</div>
+
+<script>
+  var ROOMS = {
+    bed1:{label:"Chambre 1",beds:"1 lit double",
+      desc:"La chambre principale romantique et la pièce phare de l'appartement. Elle offre une fresque tropicale saisissante, une cheminée en marbre, des tables de chevet à miroir et un éclairage doux et chaleureux — un espace calme et élégant pour se détendre. Linge 100 % coton fourni.",
+      imgs:["/images/bedroom1.jpg","/images/living-room.jpg","/images/bedroom1-detail.jpg"]},
+    bed2:{label:"Chambre 2",beds:"Canapé-lit (convertible en lit double) + lit simple au-dessus · coin bureau",
+      desc:"Une chambre familiale lumineuse et modulable. Le canapé du bas se transforme en lit double confortable, avec un lit simple au-dessus — idéal pour les enfants ou les amis. Un lit parapluie &amp; matelas sont disponibles sur demande, et des serviettes supplémentaires sont rangées dans l'armoire ici (à droite). La pièce fait aussi office de bureau au calme, avec une table de travail, une chaise, une lampe et un écran.",
+      imgs:["/images/bedroom2.jpg","/images/workspace.jpg"]},
+    living:{label:"Salon",beds:"1 canapé-lit (couche 2 personnes de plus)",
+      desc:"Salon et salle à manger ouverts, lumineux avec parquet et une arche vers la cuisine. Un grand canapé d'angle gris se transforme en canapé-lit, il y a une table à manger en marbre pour six et une Smart TV avec streaming. L'endroit parfait pour se retrouver le soir.",
+      imgs:["/images/living-wide.jpg","/images/salon.jpg","/images/living-cosy.jpg"]},
+    kitchen:{label:"Cuisine",beds:"Entièrement équipée — four, plaque à induction, micro-ondes &amp; Nespresso",
+      desc:"Une cuisine lumineuse et entièrement équipée avec des meubles gris doux, des suspensions dorées et un bar en marbre. Tout pour cuisiner et dîner sur place : four, plaque à induction, micro-ondes, réfrigérateur &amp; congélateur, bouilloire, grille-pain, Nespresso, plus vaisselle, couverts, casseroles, poêles et verres à vin. Les basiques (huile, sel et poivre) sont fournis.",
+      imgs:["/images/kitchen.jpg"]},
+    bathroom:{label:"Salle de bain",beds:"Douche à l'italienne · lave-linge · sèche-cheveux",
+      desc:"Une jolie salle de bain au papier peint fleuri joyeux, une grande douche à l'italienne vitrée, un meuble-vasque moderne et un sèche-serviettes. Un lave-linge, un sèche-cheveux et des serviettes fraîches sont fournis, avec des serviettes supplémentaires dans l'armoire de la 2e chambre.",
+      imgs:["/images/bathroom.jpg","/images/bathroom2.jpg"]}
+  };
+  function openRoom(key){
+    var r=ROOMS[key]; if(!r) return;
+    var imgs=r.imgs.map(function(s){return '<img src="'+s+'" alt="'+r.label+'" loading="lazy" onerror="this.style.display=\'none\'">';}).join('');
+    document.getElementById('roomSheet').innerHTML=
+      '<button class="x" onclick="closeRoom()" aria-label="Fermer">×</button>'+
+      '<div class="rn">'+r.label+'</div><h3>'+r.label+'</h3>'+
+      '<div class="beds">'+r.beds+'</div><p>'+r.desc+'</p>'+
+      '<div class="mphotos">'+imgs+'</div>';
+    document.getElementById('roomModal').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeRoom(){document.getElementById('roomModal').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeRoom();});
+</script>
+
+<script>
+  var QUIZ=[
+    {q:"Béziers est l'une des plus anciennes villes de France — plus ancienne que Paris.",o:["Vrai","Faux"],a:0,e:"Vrai ! Un comptoir grec existait ici vers 575 av. J.-C., faisant de Béziers l'une des plus anciennes villes de France — plus ancienne que Paris et même Marseille."},
+    {q:"Qui est né à Béziers et a conçu le Canal du Midi ?",o:["Gustave Eiffel","Pierre-Paul Riquet","Vauban"],a:1,e:"Pierre-Paul Riquet (né en 1609) — à 58 ans, il a entrepris les 240 km du Canal du Midi reliant la Méditerranée à l'Atlantique."},
+    {q:"En 2025, les Halles de Béziers ont remporté un titre national. Lequel ?",o:["Meilleur fromage de France","Plus grand marché d'Europe","Plus Beau Marché de France"],a:2,e:"Le Plus Beau Marché de France ! Les Halles ont remporté « Le Plus Beau Marché de France 2025 » (TF1), après une restauration de 20 M€ et une réouverture fin 2024."},
+    {q:"Le héros de la Résistance Jean Moulin est né à Béziers.",o:["Faux","Vrai"],a:1,e:"Vrai — Jean Moulin (1899–1943), qui a unifié la Résistance française, est né ici. Le musée des Beaux-Arts local conserve sa collection d'art."},
+    {q:"Quels jours se tient le marché aux antiquités &amp; à la brocante sur les Allées Paul Riquet ?",o:["Les lundis seulement","Mardis & samedis","Les dimanches seulement"],a:1,e:"Mardis & samedis — plus un joli marché aux fleurs chaque vendredi sur la même avenue ombragée."},
+    {q:"Le Théâtre Municipal à l'italienne de Béziers (construit en 1844) est aujourd'hui…",o:["Fermé et à l'abandon","Restauré et accueille toujours une saison complète","Transformé en cinéma"],a:1,e:"Restauré et bien vivant — c'est le seul théâtre à l'italienne « bonbonnière » de France à avoir gardé son aspect d'origine, avec des spectacles d'octobre à mai et des visites des coulisses sur rendez-vous."},
+    {q:"Les rouges du Languedoc (Syrah, Grenache, Mourvèdre) sont généralement connus pour des notes de…",o:["Mangue & banane tropicales","Fruits rouges, épices & herbes de garrigue","Tourbe fumée"],a:1,e:"Fruits rouges, épices chaudes et « garrigue » (herbes sauvages méditerranéennes) — la signature de Saint-Chinian, Faugères et des rouges du Languedoc."},
+    {q:"Depuis quand le Canal du Midi est-il classé au patrimoine mondial de l'UNESCO ?",o:["Les années 1970","Depuis 1996","Les années 2010"],a:1,e:"Depuis 1996. Le canal parcourt 240 km de la Méditerranée à Toulouse."},
+    {q:"Combien d'habitants compte Béziers aujourd'hui environ ?",o:["Environ 250 000","Environ 30 000","Environ 80 000"],a:2,e:"Environ 80 000 — une ville vivante qui garde fièrement son caractère occitan."},
+    {q:"Chaque août, Béziers accueille un festival attirant environ un million de visiteurs. Lequel ?",o:["L'Oktoberfest","Le Festival de Cannes","La Feria de Béziers"],a:2,e:"La Feria de Béziers — cinq jours de musique, de flamenco et de fêtes de rue chaque août."}
+  ];
+  (function(){
+    var box=document.getElementById('quizbox'); if(!box) return;
+    var answered=0, score=0;
+    QUIZ.forEach(function(item,qi){
+      var card=document.createElement('div'); card.className='qq';
+      var h=document.createElement('div'); h.className='qn'; h.innerHTML='<b>'+(qi+1)+'.</b> '+item.q; card.appendChild(h);
+      item.o.forEach(function(opt,oi){
+        var b=document.createElement('button'); b.className='qopt'; b.type='button'; b.textContent=opt;
+        b.onclick=function(){
+          var btns=card.querySelectorAll('.qopt');
+          btns.forEach(function(x){x.disabled=true;});
+          if(oi===item.a){ b.classList.add('correct'); score++; }
+          else{ b.classList.add('wrong'); btns[item.a].classList.add('correct'); }
+          card.querySelector('.qexpl').classList.add('show');
+          answered++;
+          if(answered===QUIZ.length){
+            var s=document.getElementById('quizscore');
+            s.style.display='block';
+            s.innerHTML='🏆 Vous avez obtenu <b>'+score+' / '+QUIZ.length+'</b> ! '+(score===QUIZ.length?'Un vrai Biterrois — bravo !':(score>=QUIZ.length-2?'Impressionnant — vous connaissez bien Béziers !':'Vous avez de quoi explorer. Bonne découverte de la ville !'));
+          }
+        };
+        card.appendChild(b);
+      });
+      var ex=document.createElement('div'); ex.className='qexpl'; ex.textContent=item.e; card.appendChild(ex);
+      box.appendChild(card);
+    });
+  })();
+  function openQuiz(){document.getElementById('quizModal').classList.add('open');document.body.style.overflow='hidden';}
+  function closeQuiz(){document.getElementById('quizModal').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeQuiz();});
+</script>
+
+</body>
+</html>
